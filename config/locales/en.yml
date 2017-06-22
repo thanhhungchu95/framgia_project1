@@ -1,1 +1,26 @@
 en:
+  layouts:
+    application:
+      title: "The wonderful blog application"
+    footer:
+      top: "Back To Top"
+      version: "Social Life © %{year}"
+    header:
+      app_name: "Social Life"
+      help: "Help"
+      home: "Home"
+      logout: "Log out"
+      placeholder: "Find a member ..."
+      profile: "Profile"
+      settings: "Settings"
+  statics:
+    welcome:
+      description: "A very beautiful blog application"
+      login: "Log in"
+      or: "or"
+      signup: "Sign up now!"
+      welcome: "Welcome"
+      welcome_tip: "Welcome to Social Life"
+    help:
+      help: "Help"
+      support: "To get help, please mail to [thanhhungchu95@gmail.com]"

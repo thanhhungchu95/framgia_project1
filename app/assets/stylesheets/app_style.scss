@@ -1,2 +1,105 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
+
+$footer-gray: #4b4f56;
+$gray-hidden: #e8e8e8;
+$header-blue: #3b5998;
+$view-background: #dddfe2;
+$white: #fff;
+
+body {
+  background-color: $white;
+  border: 1px $gray-hidden;
+  margin: 0 140px;
+  padding-top: 50px;
+}
+
+html {
+  background-color: $view-background;
+}
+
+.action {
+  list-style: none;
+  margin-left: -60px;
+  li {
+    display: inline-block;
+  }
+}
+
+.center {
+  text-align: center;
+  margin: 10px;
+  h4 {
+    margin-bottom: 80px;
+  }
+}
+
+.container {
+  width: 1000px;
+}
+
+.footer {
+  background-color: $footer-gray;
+  min-height: 35px;
+  .to-top {
+    background-color: inherit;
+    border: 1px solid;
+    border-radius: 1px;
+    color: $white;
+    float: right;
+    font-weight: bold;
+    height: 25px;
+    margin: 5px 5px 5px;
+    &:hover {
+      background-color: $white;
+      color: $footer-gray;
+    }
+  }
+
+  .version {
+    color: $white;
+    margin-left: 10px;
+    text-decoration: underline;
+  }
+}
+
+.header {
+  background-color: $header-blue;
+  margin: 0 140px;
+  min-height: 50px;
+  .dropdown-menu {
+    background-color: $header-blue;
+    min-width: 20px;
+    li {
+      a {
+        &:hover {
+          background-color: $header-blue;
+        }
+      }
+    }
+  }
+  .link-bar {
+    list-style: none;
+    margin-right: 0px;
+    li {
+      float: left;
+      margin: 15px 5px;
+      a {
+        color: $white;
+        &:hover {
+          color: $gray-hidden;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .logo {
+    height: 40px;
+    margin: 5px 0 0 5px;
+    padding-right: 10px;
+  }
+  .search-box {
+    height: 30px;
+    width: 250px;
+  }
+}
