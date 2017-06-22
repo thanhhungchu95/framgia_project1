@@ -65,6 +65,22 @@ input, textarea, select {
   }
 }
 
+.checkbox {
+  display: inline-block;
+  margin: -10px 0 10px;
+  span {
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 25px;
+    vertical-align: middle;
+  }
+}
+
+.remember {
+  margin: -5px 0 0 0 !important;
+  width: auto;
+}
+
 .container {
   width: 1000px;
 }
@@ -147,10 +163,6 @@ input, textarea, select {
     height: 30px;
     width: 250px;
   }
-}
-
-.new_user {
-  text-align: left;
 }
 
 .row {

@@ -13,6 +13,18 @@ en:
       placeholder: "Find a member ..."
       profile: "Profile"
       settings: "Settings"
+  sessions:
+    new:
+      auto_login: "Remember me on this computer"
+      login: "Log in"
+      logout_first: "Please log out current account first"
+      non_account: "Don't have an account."
+      password: "Password"
+      signup: "Sign up now!"
+      user_name: "Username"
+    create:
+      welcome: "Welcome back"
+      error: "Invalid email/password combination"
   shared:
     errors:
       error: "error"
