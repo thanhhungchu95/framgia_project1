@@ -13,6 +13,10 @@ en:
       placeholder: "Find a member ..."
       profile: "Profile"
       settings: "Settings"
+  shared:
+    errors:
+      error: "error"
+      form_contain: "The form contain"
   statics:
     welcome:
       description: "A very beautiful blog application"
@@ -24,3 +28,14 @@ en:
     help:
       help: "Help"
       support: "To get help, please mail to [thanhhungchu95@gmail.com]"
+  users:
+    new:
+      confirm: "Re-type password"
+      create: "Sign up now!"
+      full_name: "Fullname"
+      password: "Password"
+      signup: "Sign up"
+      user_name: "Username"
+    create:
+      error: "Sign up failed. Please check your sign up information."
+      welcome: "Welcome to Social Life"

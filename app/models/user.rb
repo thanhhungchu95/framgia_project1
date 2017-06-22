@@ -12,10 +12,13 @@ class User < ApplicationRecord
   before_save {user_name.downcase!}
   has_secure_password
 
+  VALID_USERNAME_REGEX = /\A[a-z]{1}[\w+\-.]+\z/i
   validates :full_name, presence: true,
     length: {maximum: Settings.user.full_name.max_length}
   validates :user_name, presence: true,
-    length: {maximum: Settings.user.user_name.max_length},
+    length: {maximum: Settings.user.user_name.max_length,
+      minimum: Settings.user.user_name.min_length},
+    format: {with: VALID_USERNAME_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, length: {minimum: Settings.user.password.min_length},
     allow_nil: true
