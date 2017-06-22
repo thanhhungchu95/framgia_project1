@@ -3,9 +3,25 @@
 
 $footer-gray: #4b4f56;
 $gray-hidden: #e8e8e8;
+$gray-white: #bbb;
 $header-blue: #3b5998;
+$red: red;
 $view-background: #dddfe2;
 $white: #fff;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+aside {
+  section {
+    .user-info: {
+      margin-top: 20px;
+    }
+  }
+}
 
 body {
   background-color: $white;
@@ -18,12 +34,27 @@ html {
   background-color: $view-background;
 }
 
+input, textarea, select {
+  border: 1px solid $gray-white;
+  height: auto;
+  margin-bottom: 15px;
+  width: 100%;
+  @include box_sizing;
+}
+
 .action {
   list-style: none;
   margin-left: -60px;
   li {
     display: inline-block;
   }
+}
+
+.avatar {
+  float: left;
+  height: 80px;
+  margin-right: 10px;
+  width: auto;
 }
 
 .center {
@@ -36,6 +67,20 @@ html {
 
 .container {
   width: 1000px;
+}
+
+.error-explanation {
+  color: $red;
+  ul {
+    margin-bottom: 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
 
 .footer {
@@ -102,4 +147,12 @@ html {
     height: 30px;
     width: 250px;
   }
+}
+
+.new_user {
+  text-align: left;
+}
+
+.row {
+  margin: 0 -45px 20px -45px;
 }
