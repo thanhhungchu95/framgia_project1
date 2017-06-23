@@ -84,6 +84,9 @@ en:
       password: "Password"
       update: "Update"
       update_info: "Update information"
+    follow_form:
+      follow: "Follow"
+      unfollow: "Unfollow"
     update:
       error: "Update failed"
       update_info_done: "Update personal information successful"
