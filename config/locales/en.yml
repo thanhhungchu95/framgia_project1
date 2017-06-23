@@ -1,4 +1,17 @@
 en:
+  comments:
+    comment:
+      ago: "ago."
+      delete: "Delete"
+      posted: "Posted"
+      sure: "Are you sure?"
+    create:
+      commented: "Commented!"
+      content_non_empty: "can't be blank"
+      not_commented: "Comment failed!"
+    destroy:
+      deleted: "Comment deleted!"
+      not_deleted: "Comment not deleted!"
   layouts:
     application:
       title: "The wonderful blog application"
@@ -22,8 +35,10 @@ en:
       not_deleted: "Delete post failed!"
     post:
       ago: "ago."
+      comment: "Comment something..."
       delete: "Delete"
       posted: "Posted"
+      submit: "Comment"
       sure: "Are you sure?"
   sessions:
     new:
@@ -53,6 +68,7 @@ en:
       description: "A very beautiful blog application"
       login: "Log in"
       or: "or"
+      post_feed: "New feed"
       signup: "Sign up now!"
       welcome: "Welcome"
       welcome_tip: "Welcome to Social Life"
@@ -60,6 +76,10 @@ en:
       help: "Help"
       support: "To get help, please mail to [thanhhungchu95@gmail.com]"
   users:
+    index:
+      all_users: "All users"
+      no_result: "Sorry, no user found"
+      search_result: "Search result for '%{search_text}'"
     new:
       confirm: "Re-type password"
       create: "Sign up now!"

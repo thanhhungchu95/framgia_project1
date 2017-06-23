@@ -28,7 +28,7 @@ body {
   background-color: $white;
   border: 1px $gray-hidden;
   margin: 0 140px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 html {
@@ -78,7 +78,18 @@ input, textarea, select {
 }
 
 .btn-small {
-  width: 80px;
+  width: 100px;
+}
+
+.comment-form {
+  margin-left: 80px;
+  .btn-comment {
+    margin-top: -15px;
+  }
+  .comment-field {
+    margin-right: 10px;
+    width: 75%;
+  }
 }
 
 .container {
@@ -161,11 +172,13 @@ input, textarea, select {
   }
   .search-box {
     height: 30px;
+    margin-bottom: 0;
     width: 250px;
   }
 }
 
 .posts {
+  border: 2px solid $gray-hidden;
   list-style: none;
   padding: 0;
   li {
@@ -175,7 +188,7 @@ input, textarea, select {
   }
   .avatar-small {
     float: left;
-    height: 50px;
+    height: 60px;
     margin: 5px 10px;
   }
   .content {
@@ -197,6 +210,16 @@ input, textarea, select {
   }
 }
 
+.avatar-smaller {
+  float: left;
+  height: 30px;
+  margin-right: 30px;
+}
+
+.comments {
+  margin-left: 50px;
+}
+
 .remember {
   margin: -5px 0 0 0 !important;
   width: auto;
@@ -210,7 +233,7 @@ input, textarea, select {
   list-style: none;
   margin: 0;
   li {
-    border-bottom: 1px $gray-lighter;
+    border-bottom: 1px solid black;
     overflow: auto;
     padding: 10px 0;
   }

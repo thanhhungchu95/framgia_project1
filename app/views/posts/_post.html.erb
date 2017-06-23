@@ -6,8 +6,30 @@
   <span class="content"><%= post.content %></span>
   <span class="timestamp">
     <%= t ".posted" %> <%= time_ago_in_words post.created_at %> <%= t ".ago" %>
-    <% if current_user.is? post.user %>
+    <% if current_user && current_user.is?(post.user) %>
       <%= link_to t(".delete"), post, method: :delete, data: {confirm: t(".sure")} %>
+    <% end %>
+  </span>
+  <span class="comment">
+    <% if post.comments.any? %>
+      <ol class="comments">
+        <%= render comments_for post %>
+      </ol>
+    <% end %>
+    <% if logged_in? %>
+      <% if current_user.is?(post.user) || current_user.following?(post.user) %>
+        <%= form_for [post, post.comments.build] do |f| %>
+          <div class="form-inline comment-form">
+            <%= render "shared/errors", object: f.object %>
+
+            <%= f.text_field :content, placeholder: t(".comment"),
+              class: "form-control comment-field" %>
+
+            <%= f.submit t(".submit"),
+              class: "btn btn-primary btn-small btn-comment" %>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
   </span>
 </li>
