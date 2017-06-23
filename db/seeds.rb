@@ -16,6 +16,12 @@ users = User.order(:created_at).take 6
   users.each{|user| user.posts.create! title: title, content: content}
 end
 
+posts = User.first.posts.order(created_at: :desc).take 5
+9.times do
+  content = Faker::Lorem.sentence 7
+  posts.each{|post| post.comments.create! user_id: post.user.id, content: content}
+end
+
 users = User.all
 user = users.first
 following = users[2..50]

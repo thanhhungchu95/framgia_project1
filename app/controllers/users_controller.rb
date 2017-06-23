@@ -1,7 +1,17 @@
 class UsersController < ApplicationController
-  before_action :load_user, except: [:new, :create, :destroy]
+  before_action :load_user, except: [:index, :new, :create, :destroy]
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
+
+  def index
+    if params[:search]
+      @users = User.search(params[:search]).select(:id, :user_name, :full_name)
+        .sort_by_name.paginer(params[:page]).per Settings.user.index.per_page
+    else
+      @users = User.select(:id, :user_name, :full_name)
+        .sort_by_name.paginer(params[:page]).per Settings.user.index.per_page
+    end
+  end
 
   def new
     @user = User.new

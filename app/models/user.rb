@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   scope :sort_by_name, ->{order :full_name}
+  scope :search, ->search{where "full_name LIKE ?", "%#{search}%"}
 
   before_save {user_name.downcase!}
   has_secure_password

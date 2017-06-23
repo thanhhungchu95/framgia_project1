@@ -1,8 +1,10 @@
 <div class="navbar navbar-fixed-top header">
-  <%= link_to image_tag("sl-icon.png", alt: t(".logo"), class: "logo"),
-    root_path %>
-  <%= text_field_tag "query", nil, placeholder: t(".placeholder"),
-    class: "search-box" %>
+  <%= form_tag users_url, method: :get, class: "navbar-form navbar-left search-form" do %>
+    <%= link_to image_tag("sl-icon.png", alt: t(".logo"), class: "logo"),
+      root_path %>
+    <%= text_field_tag :search, params[:search], placeholder: t(".placeholder"),
+      class: "form-control search-box" %>
+  <% end %>
   <ul class="navbar navbar-nav navbar-right link-bar">
     <% if logged_in? %>
       <li><%= link_to t(".profile"), current_user %></li>

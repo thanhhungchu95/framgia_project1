@@ -1,0 +1,20 @@
+<% provide :title, t(".all_users") %>
+<h3>
+  <% if params[:search] %>
+    <% if @users.any? %>
+      <%= t ".search_result", search_text: params[:search] %>
+    <% else %>
+      <%= t ".no_result" %>
+    <% end %>
+  <% else %>
+    <%= t ".all_users" %>
+  <% end %>
+</h3>
+<ul class="user-info">
+  <% if @users.any? %>
+    <ul class="show-user-info">
+      <%= render @users %>
+    </ul>
+  <% end %>
+  <%= paginate @users, theme: "twitter-bootstrap-3" %>
+</ul>
