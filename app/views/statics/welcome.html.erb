@@ -1,10 +1,26 @@
-<% provide :title, t(".welcome") %>
-<div class="center">
-  <h1><%= t ".welcome_tip" %></h1>
-  <h4><%= t ".description" %></h4>
-  <ul class="action">
-    <li><%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %></li>
-    <li><h4><%= t ".or" %></h4></li>
-    <li><%= link_to t(".login"), login_path, class: "btn btn-lg btn-success" %></li>
-  </ul>
-</div>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user-info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="post_form">
+        <%= render "shared/post_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t ".post_feed" %></h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center">
+    <h1><%= t ".welcome_tip" %></h1>
+    <h4><%= t ".description" %></h4>
+    <ul class="action">
+      <li><%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %></li>
+      <li><h4><%= t ".or" %></h4></li>
+      <li><%= link_to t(".login"), login_path, class: "btn btn-lg btn-success" %></li>
+    </ul>
+  </div>
+<% end %>

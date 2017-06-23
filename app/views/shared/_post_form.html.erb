@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+  <%= render "shared/errors", object: f.object %>
+
+  <%= f.label :title, t(".title") %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label :content, t(".content") %>
+  <%= f.text_area :content, placeholder: t(".compose"), class: "form-control" %>
+
+  <%= f.submit t(".post"), class: "btn btn-primary" %>
+<% end %>
