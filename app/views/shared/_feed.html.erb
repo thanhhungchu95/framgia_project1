@@ -1,0 +1,6 @@
+<% if feeds_for(current_user).any? %>
+  <ol class="posts">
+    <%= render feeds_for(current_user) %>
+  </ol>
+  <%= paginate feeds_for(current_user), theme: "twitter-bootstrap-3" %>
+<% end %>

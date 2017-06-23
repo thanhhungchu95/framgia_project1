@@ -1,4 +1,8 @@
 <h3>
-  <%= image_tag "avatar.png", alt: user.user_name, class: "avatar" %>
-  <%= user.full_name %>
+  <%= image_tag "avatar.png", alt: current_user.user_name, class: "avatar" %>
+  <ul class="user-view">
+    <li><%= current_user.full_name %></li>
+    <li><span><%= link_to t(".view_profile"), current_user %></span></li>
+    <li><span><%= pluralize current_user.posts.count, t(".post") %></span></li>
+  </ul>
 </h3>

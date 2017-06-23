@@ -4,11 +4,15 @@ comment:
 post:
   content:
     max_length: 1024
+  title:
+    max_length: 120
 user:
   edit:
     start_year: 1970
   full_name:
     max_length: 50
+  helper:
+    post_per_page: 5
   password:
     min_length: 6
   user_name:

@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
 
-  has_many :microposts, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :active_relationships, class_name: Relationship.name,
     foreign_key: :follower_id, dependent: :destroy
   has_many :passive_relationships, class_name: Relationship.name,
@@ -56,5 +57,9 @@ class User < ApplicationRecord
 
   def is? user
     self == user
+  end
+
+  def feed
+    Post.where "user_id = ?", id
   end
 end

@@ -13,6 +13,18 @@ en:
       placeholder: "Find a member ..."
       profile: "Profile"
       settings: "Settings"
+  posts:
+    create:
+      created: "Post created!"
+      failed: "Post create failed :("
+    destroy:
+      deleted: "Delete post successful!"
+      not_deleted: "Delete post failed!"
+    post:
+      ago: "ago."
+      delete: "Delete"
+      posted: "Posted"
+      sure: "Are you sure?"
   sessions:
     new:
       auto_login: "Remember me on this computer"
@@ -29,6 +41,13 @@ en:
     errors:
       error: "error"
       form_contain: "The form contain"
+    post_form:
+      compose: "Compose new post..."
+      post: "Post"
+    user_info:
+      post: "post"
+      title: "Title"
+      view_profile: "View my profile"
   statics:
     welcome:
       description: "A very beautiful blog application"

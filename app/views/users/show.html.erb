@@ -2,8 +2,15 @@
 <div class="row">
   <aside class="col-md-12">
     <section class="user-info">
-      <%= render "shared/user_info", user: @user %>
+      <%= render "user" %>
     </section>
     <div class="divider"></div>
+    <% if @user.posts.any? %>
+      <h3><%= t ".posts" %> (<%= @user.posts.size %>)</h3>
+      <ol class="posts">
+        <%= render posts_for @user %>
+      </ol>
+      <%= paginate posts_for(@user), theme: "twitter-bootstrap-3" %>
+      <% end %>
+    </div>
   </aside>
-</div>

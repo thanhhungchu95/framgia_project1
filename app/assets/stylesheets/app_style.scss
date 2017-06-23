@@ -17,6 +17,7 @@ $white: #fff;
 
 aside {
   section {
+    overflow: hidden;
     .user-info: {
       margin-top: 20px;
     }
@@ -165,6 +166,43 @@ input, textarea, select {
   }
 }
 
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    border-top: 1px solid $gray-hidden;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .avatar-small {
+    float: left;
+    height: 50px;
+    margin: 5px 10px;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .title {
+    display: block;
+    margin-left: 60px;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+}
+
 .row {
   margin: 0 -45px 20px -45px;
+}
+
+.user-view {
+  list-style: none;
+  font-size: 16px;
 }
