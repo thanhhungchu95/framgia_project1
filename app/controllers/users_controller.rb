@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: [:show, :edit, :update]
+  before_action :load_user, except: [:new, :create, :destroy]
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
 
@@ -34,6 +34,14 @@ class UsersController < ApplicationController
       flash.now[:danger] = t ".error"
       render :edit
     end
+  end
+
+  def following
+    render :show_follow
+  end
+
+  def followers
+    render :show_follow
   end
 
   private

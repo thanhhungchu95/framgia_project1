@@ -13,8 +13,13 @@ user:
     max_length: 50
   helper:
     post_per_page: 5
+  index:
+    per_page: 5
   password:
     min_length: 6
+  relate:
+    followers: "followers"
+    following: "following"
   user_name:
     max_length: 20
     min_length: 5

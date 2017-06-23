@@ -2,9 +2,12 @@
 <div class="row">
   <aside class="col-md-12">
     <section class="user-info">
-      <%= render "user" %>
+      <%= render "user", user: @user %>
     </section>
-    <div class="divider"></div>
+    <section class="stats form-oneline">
+      <%= render "shared/stats" %>
+      <%= render "follow_form" if logged_in? %>
+    </section>
     <% if @user.posts.any? %>
       <h3><%= t ".posts" %> (<%= @user.posts.size %>)</h3>
       <ol class="posts">
