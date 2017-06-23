@@ -51,3 +51,20 @@ en:
     create:
       error: "Sign up failed. Please check your sign up information."
       welcome: "Welcome to Social Life"
+    edit:
+      birthday: "Birthday"
+      confirm: "Re-type password"
+      correct: "You can't update information of other account"
+      describe: "Describe about you ..."
+      edit: "Edit user"
+      full_name: "Fullname"
+      female: "Female"
+      male: "Male"
+      must_login: "Please log in first."
+      other: "Other"
+      password: "Password"
+      update: "Update"
+      update_info: "Update information"
+    update:
+      error: "Update failed"
+      update_info_done: "Update personal information successful"

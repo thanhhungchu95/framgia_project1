@@ -1,0 +1,40 @@
+<% provide :title, t(".edit") %>
+<center>
+  <h1><%= t ".update_info" %></h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for @user do |f| %>
+        <%= render "shared/errors", object: f.object %>
+
+        <%= f.label :full_name, t(".full_name") %>
+        <%= f.text_field :full_name, class: "form-control" %>
+
+        <%= f.label :password, t(".password") %>
+        <%= f.password_field :password, class: "form-control" %>
+
+        <%= f.label :password_confirmation, t(".confirm") %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+
+        <div class="form-inline">
+          <%= f.label t(".male"), for: "user_gender_true" %>
+          <%= f.radio_button :gender, true, class: "form-control" %>
+
+          <%= f.label t(".female"), for: "user_gender_false" %>
+          <%= f.radio_button :gender, false, class: "form-control" %>
+
+          <%= f.label :gender, t(".other") %>
+          <%= f.radio_button :gender, nil, class: "form-control" %>
+        </div>
+
+        <%= f.label :birthday, t(".birthday") %>
+        <%= f.date_select :birthday, order: [:day, :month, :year],
+          start_year: Settings.user.edit.start_year,
+          end_year: Time.now.year, class: "form-control" %>
+
+        <%= f.text_area :biography, placeholder: t(".describe") %>
+
+        <%= f.submit t(".update"), class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</center>
